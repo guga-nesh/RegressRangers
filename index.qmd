@@ -1,0 +1,56 @@
+---
+title: "RegressRangers"
+description: "Welcome to our proposal website. Our chosen theme is Geographically Weighted Regression Models."
+author:
+    - name: Team 15
+      affiliations:
+      - SCIS, Singapore Management University 
+date: "03 March 2023"
+date-modified: "`r Sys.Date()`"
+format: html
+execute: 
+  echo: true
+  eval: true
+  warning: false
+editor: visual
+---
+
+<hr>
+
+::: panel-tabset
+## Overview
+
+### Problem Statement
+
+Many real-world phenomena exhibit significant spatial variability, and traditional regression models that assume spatial homogeneity fail to capture the underlying patterns in the data set collected. Geographically weighted regression models are an effective way to address this problem by allowing for local variation in the relationship between the response variable and the predictor variables. However, creating accurate geographically weighted regression models can be a complex and time-consuming process that requires specialized knowledge and software. Additionally, evaluating the performance of these models can be challenging due to the local nature of the models.
+
+### Key Objectives
+
+Our project aims to create a web-based geospatial analytics tool that helps users:
+
+-   Visualise
+
+## Data
+
+## Literature Review
+
+## Methology
+
+## Application Storyboard
+
+![](images/photo_2_2023-03-03_16-12-09.jpg) ![](images/photo_4_2023-03-03_16-12-09.jpg) ![](images/photo_1_2023-03-03_16-12-09.jpg) ![](images/photo_3_2023-03-03_16-12-09.jpg)
+
+## Timeline
+
+*![](images/timeline.png) Credit to [TeamGantt](https://www.teamgantt.com/h2) for their gantt chart template.*
+
+## References
+
+## Contact Information
+
+| Name         | Contact                                                            |
+|--------------|--------------------------------------------------------------------|
+| PENG YOU YUN | [youyun.peng.2021\@smu.edu.sg](mailto:youyun.peng.2021@smu.edu.sg) |
+| HO YONG QUAN | [yongquan.ho.2020\@smu.edu.sg](mailto:yongquan.ho.2020@smu.edu.sg) |
+| S GUGANESH   | [guganeshs.2020\@smu.edu.sg](mailto:guganeshs.2020@smu.edu.sg)     |
+:::

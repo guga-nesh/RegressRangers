@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "RegressRangers",
+    "section": "",
+    "text": "OverviewDataLiterature ReviewMethologyApplication StoryboardTimelineReferencesContact Information\n\n\n\nProblem Statement\nMany real-world phenomena exhibit significant spatial variability, and traditional regression models that assume spatial homogeneity fail to capture the underlying patterns in the data set collected. Geographically weighted regression models are an effective way to address this problem by allowing for local variation in the relationship between the response variable and the predictor variables. However, creating accurate geographically weighted regression models can be a complex and time-consuming process that requires specialized knowledge and software. Additionally, evaluating the performance of these models can be challenging due to the local nature of the models.\n\n\nKey Objectives\nOur project aims to create a web-based geospatial analytics tool that helps users:\n\nVisualise\n\n\n\n\n\n\n\n\n\n\n\n\n\n   \n\n\n Credit to TeamGantt for their gantt chart template.\n\n\n\n\n\n\n\n\nName\nContact\n\n\n\n\nPENG YOU YUN\nyouyun.peng.2021@smu.edu.sg\n\n\nHO YONG QUAN\nyongquan.ho.2020@smu.edu.sg\n\n\nS GUGANESH\nguganeshs.2020@smu.edu.sg"
+  }
+]

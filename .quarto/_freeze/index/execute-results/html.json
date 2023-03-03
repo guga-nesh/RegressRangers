@@ -1,0 +1,14 @@
+{
+  "hash": "c2eef7358f2ea0119ec54a54e83e5fb6",
+  "result": {
+    "markdown": "---\ntitle: \"RegressRangers\"\ndescription: \"Welcome to our proposal website. Our chosen theme is Geographically Weighted Regression Models.\"\nauthor:\n    - name: Team 15\n      affiliations:\n      - SCIS, Singapore Management University \ndate: \"03 March 2023\"\ndate-modified: \"2023-03-03\"\nformat: html\nexecute: \n  echo: true\n  eval: true\n  warning: false\neditor: visual\n---\n\n\n<hr>\n\n::: panel-tabset\n## Overview\n\n### Problem Statement\n\nMany real-world phenomena exhibit significant spatial variability, and traditional regression models that assume spatial homogeneity fail to capture the underlying patterns in the data set collected. Geographically weighted regression models are an effective way to address this problem by allowing for local variation in the relationship between the response variable and the predictor variables. However, creating accurate geographically weighted regression models can be a complex and time-consuming process that requires specialized knowledge and software. Additionally, evaluating the performance of these models can be challenging due to the local nature of the models.\n\n### Key Objectives\n\nOur project aims to create a web-based geospatial analytics tool that helps users:\n\n-   Visualise\n\n## Data\n\n## Literature Review\n\n## Methology\n\n## Application Storyboard\n\n![](images/photo_2_2023-03-03_16-12-09.jpg) ![](images/photo_4_2023-03-03_16-12-09.jpg) ![](images/photo_1_2023-03-03_16-12-09.jpg) ![](images/photo_3_2023-03-03_16-12-09.jpg)\n\n## Timeline\n\n*![](images/timeline.png) Credit to [TeamGantt](https://www.teamgantt.com/h2) for their gantt chart template.*\n\n## References\n\n## Contact Information\n\n| Name         | Contact                                                            |\n|--------------|--------------------------------------------------------------------|\n| PENG YOU YUN | [youyun.peng.2021\\@smu.edu.sg](mailto:youyun.peng.2021@smu.edu.sg) |\n| HO YONG QUAN | [yongquan.ho.2020\\@smu.edu.sg](mailto:yongquan.ho.2020@smu.edu.sg) |\n| S GUGANESH   | [guganeshs.2020\\@smu.edu.sg](mailto:guganeshs.2020@smu.edu.sg)     |\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

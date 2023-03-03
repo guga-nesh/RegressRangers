@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2023-03-03">
 <meta name="description" content="Welcome to our proposal website. Our chosen theme is Geographically Weighted Regression Models.">
 
-<title>Team 15 Proposal - RegressRangers</title>
+<title>IS415 Team 15 Project - RegressRangers</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -54,6 +54,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -66,7 +67,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Team 15 Proposal</span>
+    <span class="navbar-title">IS415 Team 15 Project</span>
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -75,12 +76,12 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://google.com"><i class="bi bi-house-door-fill" role="img">
+    <a class="nav-link" href="https://is415-team15-proj.netlify.app/"><i class="bi bi-house-door-fill" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/guga-nesh/IS415-Project"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/guga-nesh/IS415-Team-15-Proposal"><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -122,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
     <div class="quarto-title-meta-contents">
         <p class="affiliation">
-            SCIS, Singapore Management University
+            Singapore Management University
           </p>
       </div>
     </div>
@@ -160,29 +161,234 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="key-objectives" class="level3">
 <h3 class="anchored" data-anchor-id="key-objectives">Key Objectives</h3>
-<p>Our project aims to create a web-based geospatial analytics tool that helps users:</p>
+<p>Our project aims to create a web-based geospatial analytics tool that helps users create and evaluate geographical regression models easily by:</p>
 <ul>
-<li>Visualise</li>
+<li><p>importing data</p></li>
+<li><p>identifying significant regressors in the model</p></li>
+<li><p>creating customised Linear and Geographically Weighted Models</p></li>
+<li><p>evaluating the models based on a variety of statistical tests</p></li>
 </ul>
 </section>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-
+<p>To build and test our application, we will be modeling the vaccination rate of DKI, Jakarta in the various sub-districts based on a variety of socio-economic factors.</p>
+<table class="table">
+<caption>Table 1: Datasets used</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: center;">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Literacy rate of Indonesia (based on number of school facilities)</td>
+<td style="text-align: center;"><a href="https://data.humdata.org/dataset/indonesia-education-facilities">hdx</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Access to health care facilities (based on number of health care facilities)</td>
+<td style="text-align: center;"><a href="https://data.humdata.org/dataset/indonesia-healthsites">hdx</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><ul>
+<li><p>Geospatial data</p></li>
+<li><p>Population density (Total Population / land area)</p></li>
+<li><p>Gender</p></li>
+</ul></td>
+<td style="text-align: center;"><a href="https://www.indonesia-geospasial.com/2020/04/download-shapefile-shp-batas-desa.html">Batas Desa 2019 Seluruh Indonesia</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Number of COVID-19 cases per sub-district</td>
+<td style="text-align: center;"><a href="https://riwayat-file-covid-19-dki-jakarta-jakartagis.hub.arcgis.com/">Open Data COVID-19 Provinsi DKI Jakarta</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-
+<p>We have identified studies that have attempted to perform similar types of analyses:</p>
+<section id="spatial-modeling-of-covid-19-vaccine-hesitancy-in-the-united-states" class="level6">
+<h6 class="anchored" data-anchor-id="spatial-modeling-of-covid-19-vaccine-hesitancy-in-the-united-states"><strong>1. Spatial Modeling of COVID-19 Vaccine Hesitancy in the United States</strong></h6>
+<table class="table">
+<caption>Table 2: Details of Study #1</caption>
+<colgroup>
+<col style="width: 9%">
+<col style="width: 90%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Objective</strong></td>
+<td style="text-align: left;">This study examines the spatial distribution of vaccination rates in the United States and identifies significant covariates using multiscale geographically weighted regression, which can be used as a reference for region-specific policies in monitoring vaccination programs.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Methodology</strong></td>
+<td style="text-align: left;"><ul>
+<li><p>OLS regression model.</p></li>
+<li><p>GWR model using adaptive kernel.</p></li>
+<li><p>MGWR model using bi-square kernel for weighting data and AICc (i.e., Akaike Information Criteria) to determine optimal bandwidths.</p></li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Key Learning Points</strong></td>
+<td style="text-align: left;"><ul>
+<li><p>Provide multiple models to provide most accurate results through comparison and validation.</p></li>
+<li><p>Use stepwise forward regression, Adj.<span class="math inline">\(R^2\)</span>, <span class="math inline">\(VIF\)</span>, and <span class="math inline">\(r\)</span> to exclude insignificant variables.</p></li>
+<li><p>Use adaptive bandwidth to weight the data within the bandwidth and use AICc to find optimal bandwidths.</p></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Areas for Improvement</strong></td>
+<td style="text-align: left;"><ul>
+<li>The GWR model disregards the possibility that the covariates affecting the vaccination rate are often at different scales (bias the result by exaggerating or underestimating).</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="application-of-geographically-weighted-regression-analysis-to-assess-risk-factors-for-malaria-hotspots-in-keur-soce-health-and-demographic-surveillance-site" class="level6">
+<h6 class="anchored" data-anchor-id="application-of-geographically-weighted-regression-analysis-to-assess-risk-factors-for-malaria-hotspots-in-keur-soce-health-and-demographic-surveillance-site"><strong>2. Application of geographically-weighted regression analysis to assess risk factors for malaria hotspots in Keur Soce health and demographic surveillance site</strong></h6>
+<table class="table">
+<caption>Table 3: Details of Study #2</caption>
+<colgroup>
+<col style="width: 10%">
+<col style="width: 89%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Objective</strong></td>
+<td>This study investigated malaria hotspots in Keur Soce sites by using geographically-weighted regression. Because of the occurrence of hotspots, spatial modelling of malaria cases could have a considerable effect in disease surveillance.</td>
+</tr>
+<tr class="even">
+<td><strong>Methodology</strong></td>
+<td><ul>
+<li><p>OLS</p></li>
+<li><p>GWR - Linear Regression used as a diagnostic tool for selecting predictors for this model.</p></li>
+<li><p>Assessment of model:</p>
+<ul>
+<li><p>Multicollinearity was assessed with <span class="math inline">\(VIF\)</span>.</p></li>
+<li><p>Autocorrelation statistic was applied to detect whether there is spatial autocorrelation or clustering of residuals.</p></li>
+<li><p>Spatial Independency of residuals was assessed with Moran’s I.</p></li>
+</ul></li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td><strong>Key Learning Points</strong></td>
+<td><ul>
+<li><p>GWR coefficient values can be used to explore the spatial variability of relationships between malaria incidence or persistence and selected factors.</p></li>
+<li><p>We should use AICc to determine the optimal bandwidth of the kernel function.</p></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td><strong>Areas for Improvement</strong></td>
+<td><ul>
+<li>NIL</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="a-geographically-weighted-regression-approach-to-investigate-the-effect-of-traffic-conditions-and-road-characteristics-on-air-pollutant-emissions" class="level6">
+<h6 class="anchored" data-anchor-id="a-geographically-weighted-regression-approach-to-investigate-the-effect-of-traffic-conditions-and-road-characteristics-on-air-pollutant-emissions"><strong>3. A geographically weighted regression approach to investigate the effect of traffic conditions and road characteristics on air pollutant emissions</strong></h6>
+<table class="table">
+<caption>Table 4: Details of Study #3</caption>
+<colgroup>
+<col style="width: 10%">
+<col style="width: 90%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Objective</strong></td>
+<td><ul>
+<li>This study aims to investigate the effects of traffic, road network, employment and social demographic characteristics on air pollutant emissions at the level of traffic analysis zone (TAZ).</li>
+</ul>
+<!-- -->
+<ul>
+<li>In deriving an appropriate regression model, the authors also compared the use of geographically weighted regressions and the conventional generalised linear regression model to link pollutant concentrations with various contributory variables.</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td><strong>Methodology</strong></td>
+<td><ul>
+<li><p>Linear Regression analysis - if a candidate variable and its <em>quadratic</em> and <em>cubic</em> terms are all insignificant, this variable will not be retained in the GWR models</p></li>
+<li><p>Pearson Correlation Coefficients were calculated to ensure highly correlated variables were not simultaneously included in the model.</p></li>
+<li><p>Best combination of explanatory variables determined by AICc.</p></li>
+<li><p>GWR model - used Kriging Interpolation method to get the pollutant concentrations</p>
+<ul>
+<li>correlation analysis conducted between candidate exploratory variables</li>
+</ul></li>
+<li><p>Used 10-fold cross validation of different models to infer how much prediction accuracy increases based on changes made to the model</p></li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td><strong>Key Learning Points</strong></td>
+<td><ul>
+<li><p>GWR can effectively overcome the limitation of Generalised Linear Model (GLM) in modeling the pollutant concentrations at the Traffic Analysis Zone (TAZ) level.</p></li>
+<li><p>Constraining the parameters to be constant may lead to biased parameter estimates.</p></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td><strong>Areas for Improvement</strong></td>
+<td><ul>
+<li>NIL</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+</section>
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-
+<ol type="1">
+<li><strong>Data Preparation</strong>
+<ul>
+<li><p>Import data into R environment</p></li>
+<li><p>Perform data wrangling - <strong>Kriging Interpolation Method</strong></p></li>
+</ul></li>
+<li><strong>Exploratory Data Analysis (EDA)<br>
+</strong>EDA helps users to understand the data distribution, detect outliers, and identify any missing values. This helps us evaluate the that the assumptions of statistical tests are met before performing them. EDA also helps users generate hypotheses that can guide further investigations of the issue at hand.
+<ul>
+<li><p>Draw Histograms</p></li>
+<li><p>Create Choropleth Map</p></li>
+<li><p>Check if statistical test assumptions are met</p></li>
+</ul></li>
+<li><strong>Linear Regression (OLS)</strong><br>
+Performing Ordinary Least Squares regression before GWR is important as it provides a globel model for the data. It can help identify overall trends and relationships in the data. By comparing the results of OLS and GWR, users can better understand how relationship between variables vary across space and make more informed decisions.
+<ul>
+<li><p>Generalised Multiple Linear Regression Method</p></li>
+<li><p><em>Stepwise forward regression</em> (focus on covariates with highest increase in <span class="math inline">\(R^2\)</span> and <span class="math inline">\((VIF) &lt; 3\)</span><br>
+Using stepwise forward regression helps users identify the most important predictors of a response variable while avoiding overfitting of the model.</p></li>
+</ul></li>
+<li><strong>Geographically Weighted Regression (GWR)<br>
+</strong>As mentioned in our <a href="https://is415-team15-proj.netlify.app/">Problem Statement</a>, GWR helps users determine significant covariates because it allows for the estimation of local regression coefficients that could vary spatially but not revealed in a global model (such as OLS)
+<ul>
+<li><em>Using Spearman Correlation Coefficient</em> (allows us to remove insignificant variables - if <span class="math inline">\(p &lt; 0.05\)</span>)<em><br>
+</em>It is a non-parametric measure of association that does not assume a linear relationship between variables and can be useful examining the local relationships that may vary spatially. Additionally, it is not heavily influenced by outliers.</li>
+</ul></li>
+<li><strong>Evaluation of Models</strong>
+<ul>
+<li><p><em>10-fold cross validation</em> - helps to estimate the model’s generalisation error. Can be used to compare the different models created by the different inputs of the users.</p></li>
+<li><p><em>VIF</em> - helps assess multicollinearity among the predictor variables.</p></li>
+<li><p><em>Moran’s I statistic</em> - on model’s residuals to determine if they are spatially autocorrelated.</p></li>
+<li><p><em>AIC</em> - lower values are desired as it implies a more parsimonious model.</p></li>
+<li><p><em>Adjusted</em> <span class="math inline">\(R^2\)</span> - a larger value indicates that the model can explain a larger variance of target.variable (i.e., COVID-19 vaccination rate) and is preferred.</p></li>
+</ul></li>
+</ol>
 </div>
 <div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
-<p><img src="images/photo_2_2023-03-03_16-12-09.jpg" class="img-fluid"> <img src="images/photo_4_2023-03-03_16-12-09.jpg" class="img-fluid"> <img src="images/photo_1_2023-03-03_16-12-09.jpg" class="img-fluid"> <img src="images/photo_3_2023-03-03_16-12-09.jpg" class="img-fluid"></p>
+<p><img src="images/photo_2_2023-03-03_16-12-09.jpg" class="img-fluid"></p>
+<p><img src="images/photo_4_2023-03-03_16-12-09.jpg" class="img-fluid"> <img src="images/photo_1_2023-03-03_16-12-09.jpg" class="img-fluid"> <img src="images/photo_3_2023-03-03_16-12-09.jpg" class="img-fluid"></p>
 </div>
 <div id="tabset-1-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-6-tab">
 <p><em><img src="images/timeline.png" class="img-fluid"> Credit to <a href="https://www.teamgantt.com/h2">TeamGantt</a> for their gantt chart template.</em></p>
 </div>
 <div id="tabset-1-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-7-tab">
-
+<ul>
+<li><p>Mollalo, A., &amp; Tatar, M. (2021). Spatial Modeling of COVID-19 Vaccine Hesitancy in the United States. <em>International journal of environmental research and public health</em>, <em>18</em>(18), 9488. <a href="https://doi.org/10.3390/ijerph18189488" class="uri">https://doi.org/10.3390/ijerph18189488</a></p></li>
+<li><p>Ndiath, M. M., Cisse, B., Ndiaye, J. L., Gomis, J. F., Bathiery, O., Dia, A. T., Gaye, O., &amp; Faye, B. (2015). Application of geographically-weighted regression analysis to assess risk factors for malaria hotspots in Keur Soce health and demographic surveillance site. <em>Malaria journal</em>, <em>14</em>, 463. <a href="https://doi.org/10.1186/s12936-015-0976-9" class="uri">https://doi.org/10.1186/s12936-015-0976-9</a></p></li>
+<li><p>Chengcheng, X., Jingya, Z., Liu, P. (2019). A geographically weighted regression approach to investigate the effects of traffic conditions and road characteristics on air pollutant emissions. <em>Journal of Cleaner Production, Volume 239,</em> 118084, ISSN 0959-6526, <a href="https://doi.org/10.1016/j.jclepro.2019.118084" class="uri">https://doi.org/10.1016/j.jclepro.2019.118084</a></p></li>
+</ul>
 </div>
 <div id="tabset-1-8" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-8-tab">
 <table class="table">

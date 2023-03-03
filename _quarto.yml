@@ -2,13 +2,13 @@ project:
   type: website
 
 website:
-  title: "Team 15 Proposal"
+  title: "IS415 Team 15 Project"
   navbar:
     right:
       - icon: house-door-fill
-        href: https://google.com
+        href: https://is415-team15-proj.netlify.app/
       - icon: github
-        href: https://github.com/guga-nesh/IS415-Project
+        href: https://github.com/guga-nesh/IS415-Team-15-Proposal
   search: false
 
 format:

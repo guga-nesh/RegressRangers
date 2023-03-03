@@ -159,6 +159,10 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="problem-statement">Problem Statement</h3>
 <p>Many real-world phenomena exhibit significant spatial variability, and traditional regression models that assume spatial homogeneity fail to capture the underlying patterns in the data set collected. Geographically weighted regression models are an effective way to address this problem by allowing for local variation in the relationship between the response variable and the predictor variables. However, creating accurate geographically weighted regression models can be a complex and time-consuming process that requires specialized knowledge and software. Additionally, evaluating the performance of these models can be challenging due to the local nature of the models.</p>
 </section>
+<section id="case-study" class="level3">
+<h3 class="anchored" data-anchor-id="case-study">Case Study</h3>
+<p>Analysing vaccination rates is crucial in the current climate as the world is grappling with a global pandemic caused by COVID-19. Vaccination is one of the most effective ways to prevent the spread of infectious diseases and protect communities from illness and death. With the availability of COVID-19 vaccination data, we can gain important insights into the progress of immunization campaigns and help identify areas where more resources and efforts are needed to increase vaccine uptake. Additionally, analyzing vaccination rates can inform public health policies and interventions aimed at improving vaccine distribution, accessibility, and equity, particularly for vulnerable populations who may face barriers to vaccination.</p>
+</section>
 <section id="key-objectives" class="level3">
 <h3 class="anchored" data-anchor-id="key-objectives">Key Objectives</h3>
 <p>Our project aims to create a web-based geospatial analytics tool that helps users create and evaluate geographical regression models easily by:</p>
@@ -177,33 +181,42 @@ ul.task-list li input[type="checkbox"] {
 <thead>
 <tr class="header">
 <th style="text-align: left;">Name</th>
-<th style="text-align: center;">Source</th>
+<th style="text-align: left;">Source</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Literacy rate of Indonesia (based on number of school facilities)</td>
-<td style="text-align: center;"><a href="https://data.humdata.org/dataset/indonesia-education-facilities">hdx</a></td>
+<td style="text-align: left;">Number of school facilities</td>
+<td style="text-align: left;"><a href="https://data.humdata.org/dataset/indonesia-education-facilities">data.humdata.org</a></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Access to health care facilities (based on number of health care facilities)</td>
-<td style="text-align: center;"><a href="https://data.humdata.org/dataset/indonesia-healthsites">hdx</a></td>
+<td style="text-align: left;">Number of health care facilities</td>
+<td style="text-align: left;"><a href="https://data.humdata.org/dataset/indonesia-healthsites">data.humdata.org</a></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><ul>
-<li><p>Geospatial data</p></li>
-<li><p>Population density (Total Population / land area)</p></li>
-<li><p>Gender</p></li>
-</ul></td>
-<td style="text-align: center;"><a href="https://www.indonesia-geospasial.com/2020/04/download-shapefile-shp-batas-desa.html">Batas Desa 2019 Seluruh Indonesia</a></td>
+<td style="text-align: left;">DKI Jakarta Map Boundary</td>
+<td style="text-align: left;"><a href="https://www.indonesia-geospasial.com/2020/04/download-shapefile-shp-batas-desa.html">indonesia-geospasial.com</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Number of COVID-19 cases per sub-district</td>
-<td style="text-align: center;"><a href="https://riwayat-file-covid-19-dki-jakarta-jakartagis.hub.arcgis.com/">Open Data COVID-19 Provinsi DKI Jakarta</a></td>
+<td style="text-align: left;"><a href="https://riwayat-file-covid-19-dki-jakarta-jakartagis.hub.arcgis.com/">riwayat-file-covid-19-dki-jakarta-jakartagis.hub.arcgis.com</a></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"></td>
-<td style="text-align: center;"></td>
+<td style="text-align: left;">Population density of the various sub-districts in DKI Jakarta (2019)</td>
+<td style="text-align: left;"><a href="https://data.jakarta.go.id/dataset/kepadatandluaswilayahperkelurahandkijakarta/resource/910c975b9cfa44a70271864eda8b42f5">data.jakarta.go.id</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><p>Male to female ratio of the various sub-districts in DKI Jakarta</p>
+<p>Number of Elderly in the sub-districts of DKI Jakarta</p></td>
+<td style="text-align: left;"><a href="https://data.jakarta.go.id/dataset/data-jumlah-penduduk-provinsi-dki-jakarta-berdasarkan-kelompok-usia-per-kelurahan/resource/b385c22d-9620-4f86-8d79-0314dc90abc4">data.jakarta.go.id</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Number of Educated people per sub-district</td>
+<td style="text-align: left;"><a href="https://data.jakarta.go.id/dataset/jumlah-penduduk-dki-jakarta-berdasarkan-pendidikan">data.jakarta.go.id</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Number of health workers per sub-district</td>
+<td style="text-align: left;"><a href="https://data.jakarta.go.id/dataset/data-jumlah-tenaga-kesehatan-menurut-kecamatan-provinsi-dki-jakarta/resource/c6181d187722d5d8e2cf892bcf8441d6">data.jakarta.go.id</a></td>
 </tr>
 </tbody>
 </table>
@@ -296,7 +309,7 @@ ul.task-list li input[type="checkbox"] {
 <caption>Table 4: Details of Study #3</caption>
 <colgroup>
 <col style="width: 10%">
-<col style="width: 90%">
+<col style="width: 89%">
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -344,35 +357,35 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Data Preparation</strong>
 <ul>
 <li><p>Import data into R environment</p></li>
-<li><p>Perform data wrangling - <strong>Kriging Interpolation Method</strong></p></li>
+<li><p>Perform data wrangling - <strong><em>Kriging Interpolation Method</em></strong></p></li>
 </ul></li>
 <li><strong>Exploratory Data Analysis (EDA)<br>
 </strong>EDA helps users to understand the data distribution, detect outliers, and identify any missing values. This helps us evaluate the that the assumptions of statistical tests are met before performing them. EDA also helps users generate hypotheses that can guide further investigations of the issue at hand.
 <ul>
-<li><p>Draw Histograms</p></li>
-<li><p>Create Choropleth Map</p></li>
+<li><p><strong><em>Draw Histograms</em></strong></p></li>
+<li><p><strong><em>Create Choropleth Map</em></strong></p></li>
 <li><p>Check if statistical test assumptions are met</p></li>
 </ul></li>
 <li><strong>Linear Regression (OLS)</strong><br>
 Performing Ordinary Least Squares regression before GWR is important as it provides a globel model for the data. It can help identify overall trends and relationships in the data. By comparing the results of OLS and GWR, users can better understand how relationship between variables vary across space and make more informed decisions.
 <ul>
 <li><p>Generalised Multiple Linear Regression Method</p></li>
-<li><p><em>Stepwise forward regression</em> (focus on covariates with highest increase in <span class="math inline">\(R^2\)</span> and <span class="math inline">\((VIF) &lt; 3\)</span><br>
+<li><p><strong><em>Stepwise forward regression</em></strong> (focus on covariates with highest increase in <span class="math inline">\(R^2\)</span> and <span class="math inline">\((VIF) &lt; 3\)</span><br>
 Using stepwise forward regression helps users identify the most important predictors of a response variable while avoiding overfitting of the model.</p></li>
 </ul></li>
 <li><strong>Geographically Weighted Regression (GWR)<br>
 </strong>As mentioned in our <a href="https://is415-team15-proj.netlify.app/">Problem Statement</a>, GWR helps users determine significant covariates because it allows for the estimation of local regression coefficients that could vary spatially but not revealed in a global model (such as OLS)
 <ul>
-<li><em>Using Spearman Correlation Coefficient</em> (allows us to remove insignificant variables - if <span class="math inline">\(p &lt; 0.05\)</span>)<em><br>
+<li><em>Using <strong>Spearman Correlation Coefficient</strong></em> (allows us to remove insignificant variables - if <span class="math inline">\(p &lt; 0.05\)</span>)<em><br>
 </em>It is a non-parametric measure of association that does not assume a linear relationship between variables and can be useful examining the local relationships that may vary spatially. Additionally, it is not heavily influenced by outliers.</li>
 </ul></li>
 <li><strong>Evaluation of Models</strong>
 <ul>
-<li><p><em>10-fold cross validation</em> - helps to estimate the model’s generalisation error. Can be used to compare the different models created by the different inputs of the users.</p></li>
-<li><p><em>VIF</em> - helps assess multicollinearity among the predictor variables.</p></li>
-<li><p><em>Moran’s I statistic</em> - on model’s residuals to determine if they are spatially autocorrelated.</p></li>
-<li><p><em>AIC</em> - lower values are desired as it implies a more parsimonious model.</p></li>
-<li><p><em>Adjusted</em> <span class="math inline">\(R^2\)</span> - a larger value indicates that the model can explain a larger variance of target.variable (i.e., COVID-19 vaccination rate) and is preferred.</p></li>
+<li><p><strong><em>10-fold cross validation</em></strong> - helps to estimate the model’s generalisation error. Can be used to compare the different models created by the different inputs of the users.</p></li>
+<li><p><strong><em>VIF</em></strong> - helps assess multicollinearity among the predictor variables.</p></li>
+<li><p><strong><em>Moran’s I statistic</em></strong> - on model’s residuals to determine if they are spatially autocorrelated.</p></li>
+<li><p><strong><em>AIC</em></strong> - lower values are desired as it implies a more parsimonious model.</p></li>
+<li><p><strong><em>Adjusted</em></strong><span class="math inline">\(R^2\)</span> - a larger value indicates that the model can explain a larger variance of target.variable (i.e., COVID-19 vaccination rate) and is preferred.</p></li>
 </ul></li>
 </ol>
 </div>
@@ -395,7 +408,7 @@ Using stepwise forward regression helps users identify the most important predic
 <thead>
 <tr class="header">
 <th>Name</th>
-<th>Contact</th>
+<th>Email</th>
 </tr>
 </thead>
 <tbody>

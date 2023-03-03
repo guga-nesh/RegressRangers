@@ -24,6 +24,10 @@ editor: visual
 
 Many real-world phenomena exhibit significant spatial variability, and traditional regression models that assume spatial homogeneity fail to capture the underlying patterns in the data set collected. Geographically weighted regression models are an effective way to address this problem by allowing for local variation in the relationship between the response variable and the predictor variables. However, creating accurate geographically weighted regression models can be a complex and time-consuming process that requires specialized knowledge and software. Additionally, evaluating the performance of these models can be challenging due to the local nature of the models.
 
+### Case Study
+
+Analysing vaccination rates is crucial in the current climate as the world is grappling with a global pandemic caused by COVID-19. Vaccination is one of the most effective ways to prevent the spread of infectious diseases and protect communities from illness and death. With the availability of COVID-19 vaccination data, we can gain important insights into the progress of immunization campaigns and help identify areas where more resources and efforts are needed to increase vaccine uptake. Additionally, analyzing vaccination rates can inform public health policies and interventions aimed at improving vaccine distribution, accessibility, and equity, particularly for vulnerable populations who may face barriers to vaccination.
+
 ### Key Objectives
 
 Our project aims to create a web-based geospatial analytics tool that helps users create and evaluate geographical regression models easily by:
@@ -40,23 +44,27 @@ Our project aims to create a web-based geospatial analytics tool that helps user
 
 To build and test our application, we will be modeling the vaccination rate of DKI, Jakarta in the various sub-districts based on a variety of socio-economic factors.
 
-+------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-| Name                                                                         | Source                                                                                                                   |
-+:=============================================================================+:========================================================================================================================:+
-| Literacy rate of Indonesia (based on number of school facilities)            | [hdx](https://data.humdata.org/dataset/indonesia-education-facilities)                                                   |
-+------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-| Access to health care facilities (based on number of health care facilities) | [hdx](https://data.humdata.org/dataset/indonesia-healthsites)                                                            |
-+------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-| -   Geospatial data                                                          | [Batas Desa 2019 Seluruh Indonesia](https://www.indonesia-geospasial.com/2020/04/download-shapefile-shp-batas-desa.html) |
-|                                                                              |                                                                                                                          |
-| -   Population density (Total Population / land area)                        |                                                                                                                          |
-|                                                                              |                                                                                                                          |
-| -   Gender                                                                   |                                                                                                                          |
-+------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-| Number of COVID-19 cases per sub-district                                    | [Open Data COVID-19 Provinsi DKI Jakarta](https://riwayat-file-covid-19-dki-jakarta-jakartagis.hub.arcgis.com/)          |
-+------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-|                                                                              |                                                                                                                          |
-+------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Name                                                                  | Source                                                                                                                                                                                   |
++:======================================================================+:=========================================================================================================================================================================================+
+| Number of school facilities                                           | [data.humdata.org](https://data.humdata.org/dataset/indonesia-education-facilities)                                                                                                      |
++-----------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Number of health care facilities                                      | [data.humdata.org](https://data.humdata.org/dataset/indonesia-healthsites)                                                                                                               |
++-----------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| DKI Jakarta Map Boundary                                              | [indonesia-geospasial.com](https://www.indonesia-geospasial.com/2020/04/download-shapefile-shp-batas-desa.html)                                                                          |
++-----------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Number of COVID-19 cases per sub-district                             | [riwayat-file-covid-19-dki-jakarta-jakartagis.hub.arcgis.com](https://riwayat-file-covid-19-dki-jakarta-jakartagis.hub.arcgis.com/)                                                      |
++-----------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Population density of the various sub-districts in DKI Jakarta (2019) | [data.jakarta.go.id](https://data.jakarta.go.id/dataset/kepadatandluaswilayahperkelurahandkijakarta/resource/910c975b9cfa44a70271864eda8b42f5)                                           |
++-----------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Male to female ratio of the various sub-districts in DKI Jakarta      | [data.jakarta.go.id](https://data.jakarta.go.id/dataset/data-jumlah-penduduk-provinsi-dki-jakarta-berdasarkan-kelompok-usia-per-kelurahan/resource/b385c22d-9620-4f86-8d79-0314dc90abc4) |
+|                                                                       |                                                                                                                                                                                          |
+| Number of Elderly in the sub-districts of DKI Jakarta                 |                                                                                                                                                                                          |
++-----------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Number of Educated people per sub-district                            | [data.jakarta.go.id](https://data.jakarta.go.id/dataset/jumlah-penduduk-dki-jakarta-berdasarkan-pendidikan)                                                                              |
++-----------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Number of health workers per sub-district                             | [data.jakarta.go.id](https://data.jakarta.go.id/dataset/data-jumlah-tenaga-kesehatan-menurut-kecamatan-provinsi-dki-jakarta/resource/c6181d187722d5d8e2cf892bcf8441d6)                   |
++-----------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 : Table 1: Datasets used
 
@@ -147,34 +155,34 @@ We have identified studies that have attempted to perform similar types of analy
 1.  **Data Preparation**
     -   Import data into R environment
 
-    -   Perform data wrangling - **Kriging Interpolation Method**
+    -   Perform data wrangling - ***Kriging Interpolation Method***
 2.  **Exploratory Data Analysis (EDA)\
     **EDA helps users to understand the data distribution, detect outliers, and identify any missing values. This helps us evaluate the that the assumptions of statistical tests are met before performing them. EDA also helps users generate hypotheses that can guide further investigations of the issue at hand.
-    -   Draw Histograms
+    -   ***Draw Histograms***
 
-    -   Create Choropleth Map
+    -   ***Create Choropleth Map***
 
     -   Check if statistical test assumptions are met
 3.  **Linear Regression (OLS)**\
     Performing Ordinary Least Squares regression before GWR is important as it provides a globel model for the data. It can help identify overall trends and relationships in the data. By comparing the results of OLS and GWR, users can better understand how relationship between variables vary across space and make more informed decisions.
     -   Generalised Multiple Linear Regression Method
 
-    -   *Stepwise forward regression* (focus on covariates with highest increase in $R^2$ and $(VIF) < 3$\
+    -   ***Stepwise forward regression*** (focus on covariates with highest increase in $R^2$ and $(VIF) < 3$\
         Using stepwise forward regression helps users identify the most important predictors of a response variable while avoiding overfitting of the model.
 4.  **Geographically Weighted Regression (GWR)\
     **As mentioned in our [Problem Statement](https://is415-team15-proj.netlify.app/), GWR helps users determine significant covariates because it allows for the estimation of local regression coefficients that could vary spatially but not revealed in a global model (such as OLS)
-    -   *Using Spearman Correlation Coefficient* (allows us to remove insignificant variables - if $p < 0.05$)*\
+    -   *Using **Spearman Correlation Coefficient*** (allows us to remove insignificant variables - if $p < 0.05$)*\
         *It is a non-parametric measure of association that does not assume a linear relationship between variables and can be useful examining the local relationships that may vary spatially. Additionally, it is not heavily influenced by outliers.
 5.  **Evaluation of Models**
-    -   *10-fold cross validation* - helps to estimate the model's generalisation error. Can be used to compare the different models created by the different inputs of the users.
+    -   ***10-fold cross validation*** - helps to estimate the model's generalisation error. Can be used to compare the different models created by the different inputs of the users.
 
-    -   *VIF* - helps assess multicollinearity among the predictor variables.
+    -   ***VIF*** - helps assess multicollinearity among the predictor variables.
 
-    -   *Moran's I statistic* - on model's residuals to determine if they are spatially autocorrelated.
+    -   ***Moran's I statistic*** - on model's residuals to determine if they are spatially autocorrelated.
 
-    -   *AIC* - lower values are desired as it implies a more parsimonious model.
+    -   ***AIC*** - lower values are desired as it implies a more parsimonious model.
 
-    -   *Adjusted* $R^2$ - a larger value indicates that the model can explain a larger variance of target.variable (i.e., COVID-19 vaccination rate) and is preferred.
+    -   ***Adjusted***$R^2$ - a larger value indicates that the model can explain a larger variance of target.variable (i.e., COVID-19 vaccination rate) and is preferred.
 
 ## Application Storyboard
 
@@ -196,9 +204,13 @@ We have identified studies that have attempted to perform similar types of analy
 
 ## Contact Information
 
-| Name         | Contact                                                            |
-|--------------|--------------------------------------------------------------------|
++--------------+--------------------------------------------------------------------+
+| Name         | Email                                                              |
++==============+====================================================================+
 | PENG YOU YUN | [youyun.peng.2021\@smu.edu.sg](mailto:youyun.peng.2021@smu.edu.sg) |
++--------------+--------------------------------------------------------------------+
 | HO YONG QUAN | [yongquan.ho.2020\@smu.edu.sg](mailto:yongquan.ho.2020@smu.edu.sg) |
++--------------+--------------------------------------------------------------------+
 | S GUGANESH   | [guganeshs.2020\@smu.edu.sg](mailto:guganeshs.2020@smu.edu.sg)     |
++--------------+--------------------------------------------------------------------+
 :::

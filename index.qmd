@@ -26,19 +26,21 @@ Many real-world phenomena exhibit significant spatial variability, and tradition
 
 ### Case Study
 
-Analysing vaccination rates is crucial in the current climate as the world is grappling with a global pandemic caused by COVID-19. Vaccination is one of the most effective ways to prevent the spread of infectious diseases and protect communities from illness and death. With the availability of COVID-19 vaccination data, we can gain important insights into the progress of immunization campaigns and help identify areas where more resources and efforts are needed to increase vaccine uptake. Additionally, analyzing vaccination rates can inform public health policies and interventions aimed at improving vaccine distribution, accessibility, and equity, particularly for vulnerable populations who may face barriers to vaccination.
+Analysing vaccination rates is crucial in the current climate as the world is grappling with a global pandemic caused by COVID-19. Vaccination 💉 is one of the most effective ways to prevent the spread of infectious diseases and protect communities from illness and death. With the availability of COVID-19 vaccination data, we can gain important insights into the progress of immunization campaigns and help identify areas where more resources and efforts are needed to increase vaccine uptake. Additionally, analyzing vaccination rates can inform public health policies and interventions aimed at improving vaccine distribution, accessibility, and equity, particularly for vulnerable populations who may face barriers to vaccination.
+
+We will be using the above-mentioned case study to design and test our geospatial analytics tool 😃
 
 ### Key Objectives
 
 Our project aims to create a web-based geospatial analytics tool that helps users create and evaluate geographical regression models easily by:
 
--   importing data
+-   importing data 📁
 
--   identifying significant regressors in the model
+-   identifying significant regressors in the model 🔍
 
--   creating customised Linear and Geographically Weighted Models
+-   creating customised Linear and Geographically Weighted Models 📈
 
--   evaluating the models based on a variety of statistical tests
+-   evaluating the models based on a variety of statistical tests 🧪
 
 ## Data
 

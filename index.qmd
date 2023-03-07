@@ -186,6 +186,22 @@ We have identified studies that have attempted to perform similar types of analy
 
     -   ***Adjusted***$R^2$ - a larger value indicates that the model can explain a larger variance of target.variable (i.e., COVID-19 vaccination rate) and is preferred.
 
+## R Packages
+
+*This list is not exhaustive and we might add more libraries as we design and test the analytics tool.*
+
+-   **sf** - import geospatial data using approproate function(s)
+
+-   **readr** - import csv files
+
+-   **dplyr** - to perform relation joins
+
+-   **spdep** - for computation of spatial weights and calculate spatially lagged variables
+
+-   **tmap -** for plotting cartographic quality static point pattern maps or interactive maps using [leaflet](https://leafletjs.com/) API
+
+-   **tidyverse** - this is a collection of packages for performing data science tasks such as wrangling and visualising data
+
 ## Application Storyboard
 
 ![](images/photo_2_2023-03-03_16-12-09.jpg)

@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.313">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Team 11">
+<meta name="dcterms.date" content="2023-03-03">
+<meta name="description" content="Welcome to our proposal website. Our chosen theme is Geographically Weighted Regression Models.">
+
+<title>IS415 Team 11 Project - RegressRangers</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">IS415 Team 11 Project</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./proposal.html" aria-current="page">
+ <span class="menu-text">Project Proposal</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./application_info/application_info.html">
+ <span class="menu-text">Final Application</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./report.html">
+ <span class="menu-text">Project Research Paper</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="./index.html"><i class="bi bi-house-door-fill" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/guga-nesh/IS415-Team-15-Proposal"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://guga-nesh.shinyapps.io/regress_rangers_app/"><i class="bi bi-window" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">RegressRangers</h1>
+</div>
+
+<div>
+  <div class="description">
+    Welcome to our proposal website. Our chosen theme is Geographically Weighted Regression Models.
+  </div>
+</div>
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    Team 11 
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Singapore Management University
+          </p>
+      </div>
+    </div>
+
+<div class="quarto-title-meta">
+
+      
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 3, 2023</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">April 15, 2023</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<hr>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Overview</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Data</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Literature Review</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Methodology</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false">R Packages</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false">Application Storyboard</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-7" role="tab" aria-controls="tabset-1-7" aria-selected="false">Timeline</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-8" role="tab" aria-controls="tabset-1-8" aria-selected="false">References</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-9-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-9" role="tab" aria-controls="tabset-1-9" aria-selected="false">Contact Information</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<section id="problem-statement" class="level3">
+<h3 class="anchored" data-anchor-id="problem-statement">Problem Statement</h3>
+<p>Many real-world phenomena exhibit significant spatial variability, and traditional regression models that assume spatial homogeneity fail to capture the underlying patterns in the data set collected. Geographically weighted regression models are an effective way to address this problem by allowing for local variation in the relationship between the response variable and the predictor variables. However, creating accurate geographically weighted regression models can be a complex and time-consuming process that requires specialized knowledge and software. Additionally, evaluating the performance of these models can be challenging due to the local nature of the models.</p>
+</section>
+<section id="case-study" class="level3">
+<h3 class="anchored" data-anchor-id="case-study">Case Study</h3>
+<p>Analysing vaccination rates is crucial in the current climate as the world is grappling with a global pandemic caused by COVID-19. Vaccination 💉 is one of the most effective ways to prevent the spread of infectious diseases and protect communities from illness and death. With the availability of COVID-19 vaccination data, we can gain important insights into the progress of immunization campaigns and help identify areas where more resources and efforts are needed to increase vaccine uptake. Additionally, analyzing vaccination rates can inform public health policies and interventions aimed at improving vaccine distribution, accessibility, and equity, particularly for vulnerable populations who may face barriers to vaccination.</p>
+<p>We will be using the above-mentioned case study to design and test our geospatial analytics tool 😃</p>
+</section>
+<section id="key-objectives" class="level3">
+<h3 class="anchored" data-anchor-id="key-objectives">Key Objectives</h3>
+<p>Our project aims to create a web-based geospatial analytics tool that helps users create and evaluate geographical regression models easily by:</p>
+<ul>
+<li><p>importing data 📁</p></li>
+<li><p>identifying significant regressors in the model 🔍</p></li>
+<li><p>creating customised Linear and Geographically Weighted Models 📈</p></li>
+<li><p>evaluating the models based on a variety of statistical tests 🧪</p></li>
+</ul>
+</section>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>To build and test our application, we will be modeling the vaccination rate of DKI, Jakarta in the various sub-districts based on a variety of socio-economic factors.</p>
+<table class="table">
+<caption>Table 1: Datasets used</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Number of school facilities</td>
+<td style="text-align: left;"><a href="https://data.humdata.org/dataset/indonesia-education-facilities">data.humdata.org</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Number of health care facilities</td>
+<td style="text-align: left;"><a href="https://data.humdata.org/dataset/indonesia-healthsites">data.humdata.org</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">DKI Jakarta Map Boundary</td>
+<td style="text-align: left;"><a href="https://www.indonesia-geospasial.com/2020/04/download-shapefile-shp-batas-desa.html">indonesia-geospasial.com</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Number of COVID-19 cases per sub-district</td>
+<td style="text-align: left;"><a href="https://riwayat-file-covid-19-dki-jakarta-jakartagis.hub.arcgis.com/">riwayat-file-covid-19-dki-jakarta-jakartagis.hub.arcgis.com</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Population density of the various sub-districts in DKI Jakarta (2019)</td>
+<td style="text-align: left;"><a href="https://data.jakarta.go.id/dataset/kepadatandluaswilayahperkelurahandkijakarta/resource/910c975b9cfa44a70271864eda8b42f5">data.jakarta.go.id</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><p>Male to female ratio of the various sub-districts in DKI Jakarta</p>
+<p>Number of Elderly in the sub-districts of DKI Jakarta</p></td>
+<td style="text-align: left;"><a href="https://data.jakarta.go.id/dataset/data-jumlah-penduduk-provinsi-dki-jakarta-berdasarkan-kelompok-usia-per-kelurahan/resource/b385c22d-9620-4f86-8d79-0314dc90abc4">data.jakarta.go.id</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Number of Educated people per sub-district</td>
+<td style="text-align: left;"><a href="https://data.jakarta.go.id/dataset/jumlah-penduduk-dki-jakarta-berdasarkan-pendidikan">data.jakarta.go.id</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Number of health workers per sub-district</td>
+<td style="text-align: left;"><a href="https://data.jakarta.go.id/dataset/data-jumlah-tenaga-kesehatan-menurut-kecamatan-provinsi-dki-jakarta/resource/c6181d187722d5d8e2cf892bcf8441d6">data.jakarta.go.id</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p>We have identified studies that have attempted to perform similar types of analyses:</p>
+<section id="spatial-modeling-of-covid-19-vaccine-hesitancy-in-the-united-states" class="level6">
+<h6 class="anchored" data-anchor-id="spatial-modeling-of-covid-19-vaccine-hesitancy-in-the-united-states"><strong>1. Spatial Modeling of COVID-19 Vaccine Hesitancy in the United States</strong></h6>
+<table class="table">
+<caption>Table 2: Details of Study #1</caption>
+<colgroup>
+<col style="width: 9%">
+<col style="width: 90%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Objective</strong></td>
+<td style="text-align: left;">This study examines the spatial distribution of vaccination rates in the United States and identifies significant covariates using multiscale geographically weighted regression, which can be used as a reference for region-specific policies in monitoring vaccination programs.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Methodology</strong></td>
+<td style="text-align: left;"><ul>
+<li><p>OLS regression model.</p></li>
+<li><p>GWR model using adaptive kernel.</p></li>
+<li><p>MGWR model using bi-square kernel for weighting data and AICc (i.e., Akaike Information Criteria) to determine optimal bandwidths.</p></li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Key Learning Points</strong></td>
+<td style="text-align: left;"><ul>
+<li><p>Provide multiple models to provide most accurate results through comparison and validation.</p></li>
+<li><p>Use stepwise forward regression, Adj.<span class="math inline">\(R^2\)</span>, <span class="math inline">\(VIF\)</span>, and <span class="math inline">\(r\)</span> to exclude insignificant variables.</p></li>
+<li><p>Use adaptive bandwidth to weight the data within the bandwidth and use AICc to find optimal bandwidths.</p></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Areas for Improvement</strong></td>
+<td style="text-align: left;"><ul>
+<li>The GWR model disregards the possibility that the covariates affecting the vaccination rate are often at different scales (bias the result by exaggerating or underestimating).</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="application-of-geographically-weighted-regression-analysis-to-assess-risk-factors-for-malaria-hotspots-in-keur-soce-health-and-demographic-surveillance-site" class="level6">
+<h6 class="anchored" data-anchor-id="application-of-geographically-weighted-regression-analysis-to-assess-risk-factors-for-malaria-hotspots-in-keur-soce-health-and-demographic-surveillance-site"><strong>2. Application of geographically-weighted regression analysis to assess risk factors for malaria hotspots in Keur Soce health and demographic surveillance site</strong></h6>
+<table class="table">
+<caption>Table 3: Details of Study #2</caption>
+<colgroup>
+<col style="width: 10%">
+<col style="width: 89%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Objective</strong></td>
+<td>This study investigated malaria hotspots in Keur Soce sites by using geographically-weighted regression. Because of the occurrence of hotspots, spatial modelling of malaria cases could have a considerable effect in disease surveillance.</td>
+</tr>
+<tr class="even">
+<td><strong>Methodology</strong></td>
+<td><ul>
+<li><p>OLS</p></li>
+<li><p>GWR - Linear Regression used as a diagnostic tool for selecting predictors for this model.</p></li>
+<li><p>Assessment of model:</p>
+<ul>
+<li><p>Multicollinearity was assessed with <span class="math inline">\(VIF\)</span>.</p></li>
+<li><p>Autocorrelation statistic was applied to detect whether there is spatial autocorrelation or clustering of residuals.</p></li>
+<li><p>Spatial Independency of residuals was assessed with Moran’s I.</p></li>
+</ul></li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td><strong>Key Learning Points</strong></td>
+<td><ul>
+<li><p>GWR coefficient values can be used to explore the spatial variability of relationships between malaria incidence or persistence and selected factors.</p></li>
+<li><p>We should use AICc to determine the optimal bandwidth of the kernel function.</p></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td><strong>Areas for Improvement</strong></td>
+<td><ul>
+<li>NIL</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="a-geographically-weighted-regression-approach-to-investigate-the-effect-of-traffic-conditions-and-road-characteristics-on-air-pollutant-emissions" class="level6">
+<h6 class="anchored" data-anchor-id="a-geographically-weighted-regression-approach-to-investigate-the-effect-of-traffic-conditions-and-road-characteristics-on-air-pollutant-emissions"><strong>3. A geographically weighted regression approach to investigate the effect of traffic conditions and road characteristics on air pollutant emissions</strong></h6>
+<table class="table">
+<caption>Table 4: Details of Study #3</caption>
+<colgroup>
+<col style="width: 10%">
+<col style="width: 89%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Objective</strong></td>
+<td><ul>
+<li>This study aims to investigate the effects of traffic, road network, employment and social demographic characteristics on air pollutant emissions at the level of traffic analysis zone (TAZ).</li>
+<li>In deriving an appropriate regression model, the authors also compared the use of geographically weighted regressions and the conventional generalised linear regression model to link pollutant concentrations with various contributory variables.</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td><strong>Methodology</strong></td>
+<td><ul>
+<li><p>Linear Regression analysis - if a candidate variable and its <em>quadratic</em> and <em>cubic</em> terms are all insignificant, this variable will not be retained in the GWR models</p></li>
+<li><p>Pearson Correlation Coefficients were calculated to ensure highly correlated variables were not simultaneously included in the model.</p></li>
+<li><p>Best combination of explanatory variables determined by AICc.</p></li>
+<li><p>GWR model - used Kriging Interpolation method to get the pollutant concentrations</p>
+<ul>
+<li>correlation analysis conducted between candidate exploratory variables</li>
+</ul></li>
+<li><p>Used 10-fold cross validation of different models to infer how much prediction accuracy increases based on changes made to the model</p></li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td><strong>Key Learning Points</strong></td>
+<td><ul>
+<li><p>GWR can effectively overcome the limitation of Generalised Linear Model (GLM) in modeling the pollutant concentrations at the Traffic Analysis Zone (TAZ) level.</p></li>
+<li><p>Constraining the parameters to be constant may lead to biased parameter estimates.</p></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td><strong>Areas for Improvement</strong></td>
+<td><ul>
+<li>NIL</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<ol type="1">
+<li><strong>Data Preparation</strong>
+<ul>
+<li><p>Import data into R environment</p></li>
+<li><p>Perform data wrangling - <strong><em>Kriging Interpolation Method</em></strong></p></li>
+</ul></li>
+<li><strong>Exploratory Data Analysis (EDA)<br>
+</strong>EDA helps users to understand the data distribution, detect outliers, and identify any missing values. This helps us evaluate the that the assumptions of statistical tests are met before performing them. EDA also helps users generate hypotheses that can guide further investigations of the issue at hand.
+<ul>
+<li><p><strong><em>Draw Histograms</em></strong></p></li>
+<li><p><strong><em>Create Choropleth Map</em></strong></p></li>
+<li><p>Check if statistical test assumptions are met</p></li>
+</ul></li>
+<li><strong>Linear Regression (OLS)</strong><br>
+Performing Ordinary Least Squares regression before GWR is important as it provides a globel model for the data. It can help identify overall trends and relationships in the data. By comparing the results of OLS and GWR, users can better understand how relationship between variables vary across space and make more informed decisions.
+<ul>
+<li><p>Generalised Multiple Linear Regression Method</p></li>
+<li><p><strong><em>Stepwise forward regression</em></strong> (focus on covariates with highest increase in <span class="math inline">\(R^2\)</span> and <span class="math inline">\((VIF) &lt; 3\)</span><br>
+Using stepwise forward regression helps users identify the most important predictors of a response variable while avoiding overfitting of the model.</p></li>
+</ul></li>
+<li><strong>Geographically Weighted Regression (GWR)<br>
+</strong>As mentioned in our <a href="https://is415-team15-proj.netlify.app/">Problem Statement</a>, GWR helps users determine significant covariates because it allows for the estimation of local regression coefficients that could vary spatially but not revealed in a global model (such as OLS)
+<ul>
+<li><em>Using <strong>Spearman Correlation Coefficient</strong></em> (allows us to remove insignificant variables - if <span class="math inline">\(p &lt; 0.05\)</span>)<em><br>
+</em>It is a non-parametric measure of association that does not assume a linear relationship between variables and can be useful examining the local relationships that may vary spatially. Additionally, it is not heavily influenced by outliers.</li>
+</ul></li>
+<li><strong>Evaluation of Models</strong>
+<ul>
+<li><p><strong><em>10-fold cross validation</em></strong> - helps to estimate the model’s generalisation error. Can be used to compare the different models created by the different inputs of the users.</p></li>
+<li><p><strong><em>VIF</em></strong> - helps assess multicollinearity among the predictor variables.</p></li>
+<li><p><strong><em>Moran’s I statistic</em></strong> - on model’s residuals to determine if they are spatially autocorrelated.</p></li>
+<li><p><strong><em>AIC</em></strong> - lower values are desired as it implies a more parsimonious model.</p></li>
+<li><p><strong><em>Adjusted</em></strong><span class="math inline">\(R^2\)</span> - a larger value indicates that the model can explain a larger variance of target.variable (i.e., COVID-19 vaccination rate) and is preferred.</p></li>
+</ul></li>
+</ol>
+</div>
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<p><em>This list is not exhaustive and we might add more libraries as we design and test the analytics tool.</em></p>
+<ul>
+<li><p><strong>sf</strong> - import geospatial data using approproate function(s)</p></li>
+<li><p><strong>readr</strong> - import csv files</p></li>
+<li><p><strong>dplyr</strong> - to perform relation joins</p></li>
+<li><p><strong>spdep</strong> - for computation of spatial weights and calculate spatially lagged variables</p></li>
+<li><p><strong>tmap -</strong> for plotting cartographic quality static point pattern maps or interactive maps using <a href="https://leafletjs.com/">leaflet</a> API</p></li>
+<li><p><strong>tidyverse</strong> - this is a collection of packages for performing data science tasks such as wrangling and visualising data</p></li>
+</ul>
+</div>
+<div id="tabset-1-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-6-tab">
+<p><img src="images/photo_2_2023-03-03_16-12-09.jpg" class="img-fluid"></p>
+<p><img src="images/photo_4_2023-03-03_16-12-09.jpg" class="img-fluid"> <img src="images/photo_1_2023-03-03_16-12-09.jpg" class="img-fluid"> <img src="images/photo_3_2023-03-03_16-12-09.jpg" class="img-fluid"></p>
+</div>
+<div id="tabset-1-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-7-tab">
+<p><em><img src="images/timeline.png" class="img-fluid"> Credit to <a href="https://www.teamgantt.com/h2">TeamGantt</a> for their gantt chart template.</em></p>
+</div>
+<div id="tabset-1-8" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-8-tab">
+<ul>
+<li><p>Mollalo, A., &amp; Tatar, M. (2021). Spatial Modeling of COVID-19 Vaccine Hesitancy in the United States. <em>International journal of environmental research and public health</em>, <em>18</em>(18), 9488. <a href="https://doi.org/10.3390/ijerph18189488" class="uri">https://doi.org/10.3390/ijerph18189488</a></p></li>
+<li><p>Ndiath, M. M., Cisse, B., Ndiaye, J. L., Gomis, J. F., Bathiery, O., Dia, A. T., Gaye, O., &amp; Faye, B. (2015). Application of geographically-weighted regression analysis to assess risk factors for malaria hotspots in Keur Soce health and demographic surveillance site. <em>Malaria journal</em>, <em>14</em>, 463. <a href="https://doi.org/10.1186/s12936-015-0976-9" class="uri">https://doi.org/10.1186/s12936-015-0976-9</a></p></li>
+<li><p>Chengcheng, X., Jingya, Z., Liu, P. (2019). A geographically weighted regression approach to investigate the effects of traffic conditions and road characteristics on air pollutant emissions. <em>Journal of Cleaner Production, Volume 239,</em> 118084, ISSN 0959-6526, <a href="https://doi.org/10.1016/j.jclepro.2019.118084" class="uri">https://doi.org/10.1016/j.jclepro.2019.118084</a></p></li>
+</ul>
+</div>
+<div id="tabset-1-9" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-9-tab">
+<table class="table">
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Email</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>PENG YOU YUN</td>
+<td><a href="mailto:youyun.peng.2021@smu.edu.sg">youyun.peng.2021@smu.edu.sg</a></td>
+</tr>
+<tr class="even">
+<td>HO YONG QUAN</td>
+<td><a href="mailto:yongquan.ho.2020@smu.edu.sg">yongquan.ho.2020@smu.edu.sg</a></td>
+</tr>
+<tr class="odd">
+<td>S GUGANESH</td>
+<td><a href="mailto:guganeshs.2020@smu.edu.sg">guganeshs.2020@smu.edu.sg</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

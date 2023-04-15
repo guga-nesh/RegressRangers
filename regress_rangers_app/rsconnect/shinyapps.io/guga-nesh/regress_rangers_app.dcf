@@ -1,0 +1,11 @@
+name: regress_rangers_app
+title:
+username:
+account: guga-nesh
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 8838987
+bundleId: 7083334
+url: https://guga-nesh.shinyapps.io/regress_rangers_app/
+when: 1681365385.30573
+lastSyncTime: 1681365385.30574

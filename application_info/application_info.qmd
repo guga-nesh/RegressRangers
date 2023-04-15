@@ -1,0 +1,35 @@
+---
+title: "Application Information"
+date: "15 April 2023"
+date-modified: "`r Sys.Date()`"
+number-sections: false
+format: html
+execute: 
+  echo: true
+  eval: true
+  warning: false
+editor: visual
+---
+
+# Geographically Weighted Regression Made Easy
+
+This page contains all information about the application we built.
+
+## User Guide
+
+1.  Upon entering the application, you will be automatically directed to the "Introduction" panel.
+2.  This panel contains information about the application and what it does.
+3.  You can choose to navigate to the other different panels in the application by clicking on the Tabset panels. For instance, to visit the "Data" tab, please click on the panel next to the "Introduction" panel.
+4.  In each tab, you should see a sidebar panel on the left for users to input information that will be computed at the back-end by the application to provide an appropriate output.
+5.  Upon clicking the gray buttons at the end of these sidebar panels, users can load or update the plots, charts, maps, or reports that they would like to see.
+6.  After generating these results, a red button will appear to inform users about what these results mean.
+
+## Our Poster
+
+![](../images/poster.png)
+
+## Get Started
+
+To use our Geospatial Application, simply click on the link below:
+
+[Go to Geospatial Application](https://guga-nesh.shinyapps.io/regress_rangers_app/)

@@ -2,13 +2,22 @@ project:
   type: website
 
 website:
-  title: "IS415 Team 15 Project"
+  title: "IS415 Team 11 Project"
   navbar:
     right:
       - icon: house-door-fill
-        href: https://is415-team15-proj.netlify.app/
+        href: "index.html"
       - icon: github
         href: https://github.com/guga-nesh/IS415-Team-15-Proposal
+      - icon: window
+        href: https://guga-nesh.shinyapps.io/regress_rangers_app/
+    left:
+      - text: "Project Proposal"
+        href: "proposal.html"
+      - text: "Final Application"
+        href: "application_info/application_info.html"
+      - text: "Project Research Paper"
+        href: "report.html"
   search: false
 
 format:

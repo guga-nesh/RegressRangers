@@ -160,7 +160,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">April 15, 2023</p>
+      <p class="date-modified">April 16, 2023</p>
     </div>
   </div>
     
@@ -190,7 +190,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>importing data 📁</p></li>
 <li><p>identifying significant regressors in the model 🔍</p></li>
 <li><p>creating customised Linear and Geographically Weighted Models 📈</p></li>
-<li><p>evaluating the models based on a variety of statistical tests 🧪</p></li>
+<li><p>understanding the models based on a variety of statistical results🧪</p></li>
 </ul>
 </section>
 </div>
@@ -206,37 +206,16 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Number of school facilities</td>
-<td style="text-align: left;"><a href="https://data.humdata.org/dataset/indonesia-education-facilities">data.humdata.org</a></td>
+<td style="text-align: left;">2019 DKI Jakarta Census data</td>
+<td style="text-align: left;"><a href="https://www.indonesia-geospasial.com/2020/04/download-shapefile-shp-batas-desa.html">DKI Jakarta Census Data</a></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Number of health care facilities</td>
-<td style="text-align: left;"><a href="https://data.humdata.org/dataset/indonesia-healthsites">data.humdata.org</a></td>
+<td style="text-align: left;">COVID-19 cases data in DKI Jakarta</td>
+<td style="text-align: left;"><a href="https://riwayat-file-covid-19-dki-jakarta-jakartagis.hub.arcgis.com/">District based COVID-19 data</a></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">DKI Jakarta Map Boundary</td>
-<td style="text-align: left;"><a href="https://www.indonesia-geospasial.com/2020/04/download-shapefile-shp-batas-desa.html">indonesia-geospasial.com</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Number of COVID-19 cases per sub-district</td>
-<td style="text-align: left;"><a href="https://riwayat-file-covid-19-dki-jakarta-jakartagis.hub.arcgis.com/">riwayat-file-covid-19-dki-jakarta-jakartagis.hub.arcgis.com</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Population density of the various sub-districts in DKI Jakarta (2019)</td>
-<td style="text-align: left;"><a href="https://data.jakarta.go.id/dataset/kepadatandluaswilayahperkelurahandkijakarta/resource/910c975b9cfa44a70271864eda8b42f5">data.jakarta.go.id</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><p>Male to female ratio of the various sub-districts in DKI Jakarta</p>
-<p>Number of Elderly in the sub-districts of DKI Jakarta</p></td>
-<td style="text-align: left;"><a href="https://data.jakarta.go.id/dataset/data-jumlah-penduduk-provinsi-dki-jakarta-berdasarkan-kelompok-usia-per-kelurahan/resource/b385c22d-9620-4f86-8d79-0314dc90abc4">data.jakarta.go.id</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Number of Educated people per sub-district</td>
-<td style="text-align: left;"><a href="https://data.jakarta.go.id/dataset/jumlah-penduduk-dki-jakarta-berdasarkan-pendidikan">data.jakarta.go.id</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Number of health workers per sub-district</td>
-<td style="text-align: left;"><a href="https://data.jakarta.go.id/dataset/data-jumlah-tenaga-kesehatan-menurut-kecamatan-provinsi-dki-jakarta/resource/c6181d187722d5d8e2cf892bcf8441d6">data.jakarta.go.id</a></td>
+<td style="text-align: left;">Vaccination Rate data in DKI Jakarta</td>
+<td style="text-align: left;"><a href="https://riwayat-file-vaksinasi-dki-jakarta-jakartagis.hub.arcgis.com/">District based Vaccination data</a></td>
 </tr>
 </tbody>
 </table>
@@ -371,38 +350,31 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
 <ol type="1">
-<li><strong>Data Preparation</strong>
+<li><strong>Data Visualisation</strong>
 <ul>
 <li><p>Import data into R environment</p></li>
-<li><p>Perform data wrangling - <strong><em>Kriging Interpolation Method</em></strong></p></li>
+<li><p>Show data in tabular format</p></li>
 </ul></li>
 <li><strong>Exploratory Data Analysis (EDA)<br>
 </strong>EDA helps users to understand the data distribution, detect outliers, and identify any missing values. This helps us evaluate the that the assumptions of statistical tests are met before performing them. EDA also helps users generate hypotheses that can guide further investigations of the issue at hand.
 <ul>
 <li><p><strong><em>Draw Histograms</em></strong></p></li>
 <li><p><strong><em>Create Choropleth Map</em></strong></p></li>
-<li><p>Check if statistical test assumptions are met</p></li>
+<li><p><strong><em>Correlation Plot</em></strong></p></li>
 </ul></li>
 <li><strong>Linear Regression (OLS)</strong><br>
 Performing Ordinary Least Squares regression before GWR is important as it provides a globel model for the data. It can help identify overall trends and relationships in the data. By comparing the results of OLS and GWR, users can better understand how relationship between variables vary across space and make more informed decisions.
 <ul>
 <li><p>Generalised Multiple Linear Regression Method</p></li>
-<li><p><strong><em>Stepwise forward regression</em></strong> (focus on covariates with highest increase in <span class="math inline">\(R^2\)</span> and <span class="math inline">\((VIF) &lt; 3\)</span><br>
-Using stepwise forward regression helps users identify the most important predictors of a response variable while avoiding overfitting of the model.</p></li>
+<li><p>Residual Plot</p></li>
+<li><p>Check for spatial autocollinearity</p></li>
+<li><p>Check linearity and normality assumptions</p></li>
 </ul></li>
 <li><strong>Geographically Weighted Regression (GWR)<br>
 </strong>As mentioned in our <a href="https://is415-team15-proj.netlify.app/">Problem Statement</a>, GWR helps users determine significant covariates because it allows for the estimation of local regression coefficients that could vary spatially but not revealed in a global model (such as OLS)
 <ul>
-<li><em>Using <strong>Spearman Correlation Coefficient</strong></em> (allows us to remove insignificant variables - if <span class="math inline">\(p &lt; 0.05\)</span>)<em><br>
-</em>It is a non-parametric measure of association that does not assume a linear relationship between variables and can be useful examining the local relationships that may vary spatially. Additionally, it is not heavily influenced by outliers.</li>
-</ul></li>
-<li><strong>Evaluation of Models</strong>
-<ul>
-<li><p><strong><em>10-fold cross validation</em></strong> - helps to estimate the model’s generalisation error. Can be used to compare the different models created by the different inputs of the users.</p></li>
-<li><p><strong><em>VIF</em></strong> - helps assess multicollinearity among the predictor variables.</p></li>
-<li><p><strong><em>Moran’s I statistic</em></strong> - on model’s residuals to determine if they are spatially autocorrelated.</p></li>
-<li><p><strong><em>AIC</em></strong> - lower values are desired as it implies a more parsimonious model.</p></li>
-<li><p><strong><em>Adjusted</em></strong><span class="math inline">\(R^2\)</span> - a larger value indicates that the model can explain a larger variance of target.variable (i.e., COVID-19 vaccination rate) and is preferred.</p></li>
+<li><strong><em>R2 Plot</em></strong></li>
+<li><strong><em>Coefficient t-value plot</em></strong></li>
 </ul></li>
 </ol>
 </div>
@@ -418,8 +390,10 @@ Using stepwise forward regression helps users identify the most important predic
 </ul>
 </div>
 <div id="tabset-1-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-6-tab">
-<p><img src="images/photo_2_2023-03-03_16-12-09.jpg" class="img-fluid"></p>
-<p><img src="images/photo_4_2023-03-03_16-12-09.jpg" class="img-fluid"> <img src="images/photo_1_2023-03-03_16-12-09.jpg" class="img-fluid"> <img src="images/photo_3_2023-03-03_16-12-09.jpg" class="img-fluid"></p>
+<p><img src="images/photo_3_2023-04-16_13-54-12.jpg" class="img-fluid"> <img src="images/photo_2_2023-04-16_13-54-12.jpg" class="img-fluid"></p>
+<p><img src="images/photo_5_2023-04-16_13-54-12.jpg" class="img-fluid"></p>
+<p><img src="images/photo_4_2023-04-16_13-54-12.jpg" class="img-fluid"></p>
+<p><img src="images/photo_1_2023-04-16_13-54-12.jpg" class="img-fluid"> <img src="images/photo_6_2023-04-16_13-54-12.jpg" class="img-fluid"></p>
 </div>
 <div id="tabset-1-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-7-tab">
 <p><em><img src="images/timeline.png" class="img-fluid"> Credit to <a href="https://www.teamgantt.com/h2">TeamGantt</a> for their gantt chart template.</em></p>

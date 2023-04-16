@@ -19,7 +19,7 @@ We are RegressRangers, the team behind this project, and we are excited to share
 
 Our goal is to create a comprehensive and user-friendly platform for exploring geospatial data. We believe that this information can be incredibly valuable for a wide range of applications, from urban planning to environmental monitoring. We will be specifically focusing on Geographically Weighted Regression Models.
 
-To achieve this goal, we are using a variety of open-source tools and technologies, including \[sf\](https://r-spatial.github.io/sf/) for data processing, \[Leaflet\](https://leafletjs.com/) for interactive maps, and \[Quarto\](https://quarto.org/) for documentation and analysis.
+To achieve this goal, we are using a variety of open-source tools and technologies, including [sf](https://r-spatial.github.io/sf/) for data processing, [Leaflet](https://leafletjs.com/) for interactive maps, and [Quarto](https://quarto.org/) for documentation and analysis.
 
 ## Meet the Team
 
